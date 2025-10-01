@@ -80,9 +80,5 @@ I like building clean REST APIs, wiring them to simple UIs, and automating the b
 </div>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/it23372726/it23372726/main/metrics/achievements.svg" alt="Achievements"/>
-</p>
-
-<p align="center">
   <img src="./profile-3d-contrib/profile-night-rainbow.svg" alt="3D contribution graph"/>
 </p>
