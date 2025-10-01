@@ -1,28 +1,25 @@
-name: contrib-3d
+name: GitHub-Profile-3D-Contrib
 on:
   schedule:
-    - cron: "0 2 * * 1,4"   # twice a week
-  workflow_dispatch: {}
+    - cron: "0 18 * * *"   # 18:00 UTC (~11:30pm Asia/Colombo)
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: yoshi389111/github-profile-3d-contrib@0.7.1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          user: it23372726
-          settings: >
-            {
-              "year": "auto",
-              "theme": "night-rainbow"
-            }
-      - name: Commit files
+      - uses: actions/checkout@v5
+      - uses: yoshi389111/github-profile-3d-contrib@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+      - name: Commit & Push
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add profile-3d-contrib/*
-          git commit -m "chore: update 3D contribution graph" || echo "No changes"
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add -A .
+          git commit -m "generated" || echo "no changes"
           git push
-
