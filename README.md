@@ -1,6 +1,6 @@
 <div align="center">
 
-
+<a href="#"><img src="./assets/header-banner.png" alt="Profile Header" width="100%"/></a>
 
 <h1>Akila Udara</h1>
 <h3>CS Undergraduate @ SLIIT · Backend-leaning Full-Stack · DevOps Basics</h3>
