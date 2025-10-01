@@ -1,24 +1,40 @@
 name: metrics
 on:
   schedule:
-    - cron: "0 3 * * 1,4"   # twice a week
+    - cron: "0 17 * * 1,4"   # twice a week
   workflow_dispatch: {}
+
+# allow the action to commit the generated SVG
+permissions:
+  contents: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Build metrics (achievements)
+      - name: Generate Achievements SVG
         uses: lowlighter/metrics@latest
         with:
+          # your classic PAT in repo secrets
           token: ${{ secrets.METRICS_TOKEN }}
+
+          # where to save the output
+          filename: metrics/achievements.svg
+
+          # whose profile to read
           user: it23372726
+
+          # look & base sections
           template: classic
           base: ""
           config_timezone: Asia/Colombo
-          plugins: achievements
-          achievements: yes
-          achievements_threshold: C
-          achievements_secrets: yes
-          achievements_display: detailed
-          filename: metrics/achievements.svg
+
+          # IMPORTANT: use plugin_* keys (not 'plugins' / 'achievements')
+          plugin_achievements: yes
+          plugin_achievements_threshold: C
+          plugin_achievements_display: detailed
+          plugin_achievements_secrets: yes
+
+          # commit using the workflow's token to your main branch
+          committer_token: ${{ secrets.GITHUB_TOKEN }}
+          committer_branch: main
