@@ -23,8 +23,8 @@
 
 ## Contact
 - Email: [akilaudara.p@gmail.com](mailto:akilaudara.p@gmail.com)
-- LinkedIn: add your link here
-- Portfolio: add your link here
+- LinkedIn: 
+- Portfolio: 
 
 ## About me
 I like building clean REST APIs, wiring them to simple UIs, and automating the boring parts with CI/CD. I’m most comfortable in .NET and Spring Boot, deploy to Azure when I can, and keep code readable and testable.
