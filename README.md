@@ -3,7 +3,6 @@
 	<h3>Computer Science undergraduate</h3>
 	<p>
 		<img src="https://komarev.com/ghpvc/?username=it23372726&label=Profile%20views&color=0e75b6&style=flat" alt="Profile Views" />
-		<img src="https://img.shields.io/badge/Focus-Cybersecurity-0e75b6" alt="Focus" />
 		<img src="https://img.shields.io/badge/Learning-Everyday-success" alt="Learning" />
 	</p>
 	<p>
@@ -27,7 +26,7 @@
 <p align="center">
 </p>
 
-- 📫 Email: [tharindu.github@gmail.com](mailto:akilaudara.p@gmail.com)
+- 📫 Email: [Akilaydara.p@gmail.com](mailto:akilaudara.p@gmail.com)
 
 <h2 id="core-skills">Skill Domain</h2>
 
